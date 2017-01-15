@@ -346,7 +346,39 @@ public void OnPluginStart()
 	gc_iThrowKnifeCount = AutoExecConfig_CreateConVar("sm_jailshop_throw_knife_count", "2", "how many knifes a prisoner can throw", _, true, 1.0);
 	gc_bTaser = AutoExecConfig_CreateConVar("sm_jailshop_taser_price", "6000", "0 - disabled, price of the '3 bullets Taser' shop item", _, true, 0.0);
 	gc_bMolotov = AutoExecConfig_CreateConVar("sm_jailshop_molotov_price", "2500", "0 - disabled, price of the 'Molotov & flashs' shop item", _, true, 0.0);
-	
+	gc_zCustomFlagShop_OpenCells = AutoExecConfig_CreateConvar("sm_jailshop_OpenCells_Flag", "Flag required to buy/use open cells - Sourcemod Flag here as the value. Leave empty for default", _, true, 0.0);
+	gc_zCustomFlagShop_Heal = AutoExecConfig_CreateConvar("sm_jailshop_OpenCells_Flag", "Flag required to buy/use heal - Sourcemod Flag here as the value. Leave empty for default", _, true, 0.0);
+	gc_zCustomFlagShop_HealOnlyTeam = AutoExecConfig_CreateConvar("sm_jailshop_OpenCells_Flag", "Flag required to buy/use healonlyteam - Sourcemod Flag here as the value. Leave empty for default", _, true, 0.0);
+	gc_zCustomFlagShop_Health = AutoExecConfig_CreateConvar("sm_jailshop_OpenCells_Flag", "Flag required to buy/use health - Sourcemod Flag here as the value. Leave empty for default", _, true, 0.0);
+	gc_zCustomFlagShop_HealthExtra = AutoExecConfig_CreateConvar("sm_jailshop_OpenCells_Flag", "Flag required to buy/use health extra - Sourcemod Flag here as the value. Leave empty for default", _, true, 0.0);
+	gc_zCustomFlagShop_HealthExtraOnlyTeam = AutoExecConfig_CreateConvar("sm_jailshop_OpenCells_Flag", "Flag required to buy/use health extra only team - Sourcemod Flag here as the value. Leave empty for default", _, true, 0.0);
+	gc_zCustomFlagShop_Revive = AutoExecConfig_CreateConvar("sm_jailshop_OpenCells_Flag", "Flag required to buy/use revive - Sourcemod Flag here as the value. Leave empty for default", _, true, 0.0);
+	gc_zCustomFlagShop_ReviveOnlyTeam = AutoExecConfig_CreateConvar("sm_jailshop_OpenCells_Flag", "Flag required to buy/use revive only team - Sourcemod Flag here as the value. Leave empty for default", _, true, 0.0);
+	gc_zCustomFlagShop_Vampire = AutoExecConfig_CreateConvar("sm_jailshop_OpenCells_Flag", "Flag required to buy/use vampire - Sourcemod Flag here as the value. Leave empty for default", _, true, 0.0);
+	gc_zCustomFlagShop_Bhop = AutoExecConfig_CreateConvar("sm_jailshop_OpenCells_Flag", "Flag required to buy/use bhop - Sourcemod Flag here as the value. Leave empty for default", _, true, 0.0);
+	gc_zCustomFlagShop_BhopOnlyTeam = AutoExecConfig_CreateConvar("sm_jailshop_OpenCells_Flag", "Flag required to buy/use bhop only team - Sourcemod Flag here as the value. Leave empty for default", _, true, 0.0);
+	gc_zCustomFlagShop_FroggyJump = AutoExecConfig_CreateConvar("sm_jailshop_OpenCells_Flag", "Flag required to buy/use froggyjump - Sourcemod Flag here as the value. Leave empty for default", _, true, 0.0);
+	gc_zCustomFlagShop_FroggyJumpOnlyTeam = AutoExecConfig_CreateConvar("sm_jailshop_OpenCells_Flag", "Flag required to buy/use froggy jump only team - Sourcemod Flag here as the value. Leave empty for default", _, true, 0.0);
+	gc_zCustomFlagShop_Gravity = AutoExecConfig_CreateConvar("sm_jailshop_OpenCells_Flag", "Flag required to buy/use gravity - Sourcemod Flag here as the value. Leave empty for default", _, true, 0.0);
+	gc_zCustomFlagShop_GravOnlyTeam = AutoExecConfig_CreateConvar("sm_jailshop_OpenCells_Flag", "Flag required to buy/use gravity only team - Sourcemod Flag here as the value. Leave empty for default", _, true, 0.0);
+	gc_zCustomFlagShop_Invisible = AutoExecConfig_CreateConvar("sm_jailshop_OpenCells_Flag", "Flag required to buy/use invisible - Sourcemod Flag here as the value. Leave empty for default", _, true, 0.0);
+	gc_zCustomFlagShop_PaperClip = AutoExecConfig_CreateConvar("sm_jailshop_OpenCells_Flag", "Flag required to buy/use paperclip - Sourcemod Flag here as the value. Leave empty for default", _, true, 0.0);
+	gc_zCustomFlagShop_NoDamage = AutoExecConfig_CreateConvar("sm_jailshop_OpenCells_Flag", "Flag required to buy/use damage - Sourcemod Flag here as the value. Leave empty for default", _, true, 0.0);
+	gc_zCustomFlagShop_NoDamageOnlyTeam = AutoExecConfig_CreateConvar("sm_jailshop_OpenCells_Flag", "Flag required to buy/use damageonlyteam - Sourcemod Flag here as the value. Leave empty for default", _, true, 0.0);
+	gc_zCustomFlagShop_NoClip = AutoExecConfig_CreateConvar("sm_jailshop_OpenCells_Flag", "Flag required to buy/use noclip - Sourcemod Flag here as the value. Leave empty for default", _, true, 0.0);
+	gc_zCustomFlagShop_Wallhack = AutoExecConfig_CreateConvar("sm_jailshop_OpenCells_Flag", "Flag required to buy/use wallhack - Sourcemod Flag here as the value. Leave empty for default", _, true, 0.0);
+	gc_zCustomFlagShop_WallhackOnlyTeam = AutoExecConfig_CreateConvar("sm_jailshop_OpenCells_Flag", "Flag required to buy/use wallhackonlyteam - Sourcemod Flag here as the value. Leave empty for default", _, true, 0.0);
+	gc_zCustomFlagShop_Bird = AutoExecConfig_CreateConvar("sm_jailshop_OpenCells_Flag", "Flag required to buy/use bird - Sourcemod Flag here as the value. Leave empty for default", _, true, 0.0);
+	gc_zCustomFlagShop_FakeModel = AutoExecConfig_CreateConvar("sm_jailshop_OpenCells_Flag", "Flag required to buy/use fake model - Sourcemod Flag here as the value. Leave empty for default", _, true, 0.0);
+	gc_zCustomFlagShop_TeleportSmoke = AutoExecConfig_CreateConvar("sm_jailshop_OpenCells_Flag", "Flag required to buy/use teleport smoke - Sourcemod Flag here as the value. Leave empty for default", _, true, 0.0);
+	gc_zCustomFlagShop_FireHe = AutoExecConfig_CreateConvar("sm_jailshop_OpenCells_Flag", "Flag required to buy/use firehe - Sourcemod Flag here as the value. Leave empty for default", _, true, 0.0);
+	gc_zCustomFlagShop_AWP = AutoExecConfig_CreateConvar("sm_jailshop_OpenCells_Flag", "Flag required to buy/use awp - Sourcemod Flag here as the value. Leave empty for default", _, true, 0.0);
+	gc_zCustomFlagShop_Deagle = AutoExecConfig_CreateConvar("sm_jailshop_OpenCells_Flag", "Flag required to buy/use deagle - Sourcemod Flag here as the value. Leave empty for default", _, true, 0.0);
+	gc_zCustomFlagShop_Knife = AutoExecConfig_CreateConvar("sm_jailshop_OpenCells_Flag", "Flag required to buy/use knife - Sourcemod Flag here as the value. Leave empty for default", _, true, 0.0);
+	gc_zCustomFlagShop_ThrowKnife = AutoExecConfig_CreateConvar("sm_jailshop_OpenCells_Flag", "Flag required to buy/use throw knife - Sourcemod Flag here as the value. Leave empty for default", _, true, 0.0);
+	gc_zCustomFlagShop_Taser = AutoExecConfig_CreateConvar("sm_jailshop_OpenCells_Flag", "Flag required to buy/use taser - Sourcemod Flag here as the value. Leave empty for default", _, true, 0.0);
+	gc_zCustomFlagShop_Molotov = AutoExecConfig_CreateConvar("sm_jailshop_OpenCells_Flag", "Flag required to buy/use molotov - Sourcemod Flag here as the value. Leave empty for default", _, true, 0.0);
+
 	
 	AutoExecConfig_ExecuteFile();
 	AutoExecConfig_CleanFile();
@@ -1518,8 +1550,19 @@ public Action Menu_OpenShop(int client)
 	Menu menu = CreateMenu(Handler_Menu_OpenShop);
 	SetMenuTitle(menu, "%t","shop_menu_title", Forward_OnGetCredits(client));
 	
-	if (GetClientTeam(client) == CS_TEAM_T)
+	if (GetClientTeam(client) == CS_TEAM_T) 
 	{
+		if (GetClientUserId(clientid)
+		{
+			if clientid = 
+
+
+		}
+		{
+					Chat(client, "%t", "You dont have permission");
+					return Plugin_Handled;
+
+        }
 		if(gp_bSmartJailDoors)
 		{
 			Format(info, sizeof(info), "%T","shop_menu_openjail", client, gc_bOpenCells.IntValue);
